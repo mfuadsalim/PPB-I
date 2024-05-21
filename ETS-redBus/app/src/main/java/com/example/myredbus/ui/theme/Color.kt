@@ -1,4 +1,4 @@
-package com.example.myredbus.ui.theme
+package com.example.myredbus
 
 import androidx.compose.ui.graphics.Color
 

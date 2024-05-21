@@ -1,4 +1,4 @@
-package com.example.myredbus.ui.theme
+package com.example.myredbus
 
 import android.app.Activity
 import android.os.Build
