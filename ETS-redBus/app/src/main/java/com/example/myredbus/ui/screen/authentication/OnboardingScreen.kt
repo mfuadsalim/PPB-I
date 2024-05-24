@@ -49,7 +49,7 @@ fun OnboardingScreen(){
             .padding(30.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ){
-        Spacer(modifier = Modifier.height(400.dp))
+        Spacer(modifier = Modifier.height(480.dp))
         Text(
             text = "Ayo Pesan Bus Anda hanya dengan Satu Ketukan",
             fontSize = 26.sp,
@@ -64,7 +64,7 @@ fun OnboardingScreen(){
             fontSize = 16.sp,
             lineHeight = 24.sp
         )
-        Spacer(modifier = Modifier.height(200.dp))
+        Spacer(modifier = Modifier.height(36.dp))
         Button(
             onClick = { /*TODO*/ },
             shape = RoundedCornerShape(16.dp),

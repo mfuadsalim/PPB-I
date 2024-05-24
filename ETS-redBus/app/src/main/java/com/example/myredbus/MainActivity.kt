@@ -9,7 +9,10 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import com.example.myredbus.ui.screen.authentication.AuthScreen
+import com.example.myredbus.ui.screen.authentication.LoginScreen
 import com.example.myredbus.ui.screen.authentication.OnboardingScreen
+import com.example.myredbus.ui.screen.authentication.RegisterScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,7 +24,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     contentAlignment = Alignment.Center
                 ){
-                    OnboardingScreen()
+                    RegisterScreen()
                 }
             }
 
