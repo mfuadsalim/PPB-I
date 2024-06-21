@@ -1,8 +1,6 @@
 package com.example.myredbus.ui.screen.authentication
 
-import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.border
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -16,7 +14,6 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -27,9 +24,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.myredbus.Gotham_Bold
-import com.example.myredbus.Gotham_Book
-import com.example.myredbus.Gotham_Bookitalic
 import com.example.myredbus.R
 
 @Composable
@@ -43,71 +37,61 @@ fun AuthScreen(){
     ) {
         Text(
             text = "@mfuadsalim",
-            fontFamily = Gotham_Bookitalic,
-            fontSize = 16.sp,
-            color = Color(0xFFD63942)
+            style = MaterialTheme.typography.displaySmall,
+            color = MaterialTheme.colorScheme.primary
         )
-        Spacer(modifier = Modifier.height(72.dp))
+        Spacer(modifier = Modifier.height(64.dp))
         Image(
             painter = painterResource(id = R.drawable.img_bus),
             contentDescription = null,
             modifier = Modifier
-                .size(330.dp)
+                .size(300.dp)
         )
         Spacer(modifier = Modifier.height(60.dp))
         Text(
             text = "Selamat Datang di redBus!",
-            fontSize = 28.sp,
-            fontFamily = Gotham_Bold,
+            fontSize = 36.sp,
+            fontWeight = FontWeight.Black,
             textAlign = TextAlign.Center,
-            lineHeight = 36.sp,
-            letterSpacing = 0.sp,
-            color = Color(0xFF292929)
+            lineHeight = 36.sp
         )
-        Spacer(modifier = Modifier.height(18.dp))
+        Spacer(modifier = Modifier.height(24.dp))
         Text(
-            fontSize = 14.sp,
-            fontFamily = Gotham_Book,
+            fontSize = 16.sp,
             text = "Masuk atau daftar sekarang untuk menikmati\n" +
                     "kemudahan memesan tiket bus, menemukan\n" +
                     "rute, dan melihat jadwal dengan redBus.",
             textAlign = TextAlign.Center,
-            lineHeight = 16.sp,
-            color = Color(0xFFB6B6B6)
+            lineHeight = 24.sp
         )
-        Spacer(modifier = Modifier.height(50.dp))
+        Spacer(modifier = Modifier.height(36.dp))
         Button(
             modifier = Modifier
                 .fillMaxWidth()
-                .height(50.dp),
+                .height(42.dp),
             onClick = { /*TODO*/ } ,
-            shape = RoundedCornerShape(10.dp),
-            colors = ButtonDefaults.buttonColors(Color(0xFFD63942))
+            shape = RoundedCornerShape(16.dp),
+            colors = ButtonDefaults.buttonColors(Color.Red)
         ) {
-            Text(
-                text = "Login",
-                fontFamily = Gotham_Bold,
-                fontSize = 22.sp,
-                letterSpacing = 0.sp
-            )
+            Text(text = "Login")
         }
         Spacer(modifier = Modifier.height(8.dp))
-        OutlinedButton(
-            shape = RoundedCornerShape(10.dp),
+        Button(
             modifier = Modifier
                 .fillMaxWidth()
-                .height(50.dp),
+                .height(42.dp),
             onClick = { /*TODO*/ } ,
-            border = BorderStroke(1.dp, Color(0xFFD63942)),
-            colors = ButtonDefaults.buttonColors(Color(0xFFFFFFF))
+            shape = RoundedCornerShape(16.dp),
+            colors = ButtonDefaults.buttonColors(Color.Red)
             ) {
-            Text(
-                text = "Register",
-                fontFamily = Gotham_Bold,
-                fontSize = 22.sp,
-                letterSpacing = 0.sp,
-                color = Color(0xFFD63942)
-                )
+            Text(text = "Register")
         }
+    }
+    Column(
+        modifier = Modifier
+            .padding(16.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+
     }
 }

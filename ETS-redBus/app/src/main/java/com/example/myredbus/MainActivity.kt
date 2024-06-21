@@ -13,6 +13,7 @@ import com.example.myredbus.ui.screen.authentication.AuthScreen
 import com.example.myredbus.ui.screen.authentication.LoginScreen
 import com.example.myredbus.ui.screen.authentication.OnboardingScreen
 import com.example.myredbus.ui.screen.authentication.RegisterScreen
+import com.example.myredbus.ui.screen.home.HomeScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,7 +25,11 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     contentAlignment = Alignment.Center
                 ){
-                    RegisterScreen()
+<<<<<<< HEAD
+                    HomeScreen()
+=======
+                    OnboardingScreen()
+>>>>>>> parent of 6328c13 (finish authentication interface)
                 }
             }
 
