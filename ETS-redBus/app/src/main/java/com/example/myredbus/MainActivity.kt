@@ -25,11 +25,10 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     contentAlignment = Alignment.Center
                 ){
-<<<<<<< HEAD
+
                     HomeScreen()
-=======
+
                     OnboardingScreen()
->>>>>>> parent of 6328c13 (finish authentication interface)
                 }
             }
 
