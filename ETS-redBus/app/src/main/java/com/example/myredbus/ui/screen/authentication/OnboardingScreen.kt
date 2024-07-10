@@ -24,12 +24,13 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
 import com.example.myredbus.Gotham_Bold
 import com.example.myredbus.Gotham_Book
 import com.example.myredbus.R
 
 @Composable
-fun OnboardingScreen(){
+fun OnboardingScreen(navController: NavHostController){
     Column(
         modifier = Modifier
             .fillMaxSize(),
@@ -79,7 +80,7 @@ fun OnboardingScreen(){
         )
         Spacer(modifier = Modifier.height(10.dp))
         Button(
-            onClick = { /*TODO*/ },
+            onClick = { navController.navigate("auth") },
             modifier = Modifier
                 .height(50.dp),
             shape = RoundedCornerShape(10.dp),

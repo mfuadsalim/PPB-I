@@ -24,10 +24,12 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
+import com.example.myredbus.Gotham_Bold
 import com.example.myredbus.R
 
 @Composable
-fun AuthScreen(){
+fun AuthScreen(navController : NavHostController){
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -37,15 +39,15 @@ fun AuthScreen(){
     ) {
         Text(
             text = "@mfuadsalim",
-            style = MaterialTheme.typography.displaySmall,
-            color = MaterialTheme.colorScheme.primary
+            fontSize = 24.sp,
+            color = Color(0xFF292929)
         )
         Spacer(modifier = Modifier.height(64.dp))
         Image(
             painter = painterResource(id = R.drawable.img_bus),
             contentDescription = null,
             modifier = Modifier
-                .size(300.dp)
+                .size(270.dp)
         )
         Spacer(modifier = Modifier.height(60.dp))
         Text(
@@ -66,25 +68,35 @@ fun AuthScreen(){
         )
         Spacer(modifier = Modifier.height(36.dp))
         Button(
+            onClick = { navController.navigate("login") },
             modifier = Modifier
-                .fillMaxWidth()
-                .height(42.dp),
-            onClick = { /*TODO*/ } ,
-            shape = RoundedCornerShape(16.dp),
-            colors = ButtonDefaults.buttonColors(Color.Red)
+                .height(50.dp)
+                .fillMaxWidth(),
+            shape = RoundedCornerShape(10.dp),
+            colors = ButtonDefaults.buttonColors(Color(0xFFD63942)),
         ) {
-            Text(text = "Login")
+            Text(
+                text = "Login",
+                fontFamily = Gotham_Bold,
+                fontSize = 18.sp,
+                letterSpacing = 0.sp
+            )
         }
         Spacer(modifier = Modifier.height(8.dp))
         Button(
+            onClick = { navController.navigate("register") },
             modifier = Modifier
-                .fillMaxWidth()
-                .height(42.dp),
-            onClick = { /*TODO*/ } ,
-            shape = RoundedCornerShape(16.dp),
-            colors = ButtonDefaults.buttonColors(Color.Red)
+                .height(50.dp)
+                .fillMaxWidth(),
+            shape = RoundedCornerShape(10.dp),
+            colors = ButtonDefaults.buttonColors(Color(0xFFD63942)),
             ) {
-            Text(text = "Register")
+            Text(
+                text = "Register",
+                fontFamily = Gotham_Bold,
+                fontSize = 18.sp,
+                letterSpacing = 0.sp
+            )
         }
     }
     Column(
